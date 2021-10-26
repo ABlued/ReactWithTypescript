@@ -1,46 +1,44 @@
-# Getting Started with Create React App
+# Webpack 을 사용해 React 앱을 만들려면 필요한 모듈들
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- module bundler
+  - webpack 2 : webpack 필수 모듈
+  - webpack-dev-server : webpack을 실시간으로 테스트하기 위한 모듈
+- loader
+  - babel-loader : es6,jsx를 자바스크립트로 변환해주는 모듈
+    - babel-core : 필수 모듈
+    - babel-preser-env : babel의 어떤 기능을 사용할지 선택하는 모듈
+    - babel-plugin-transform-react-jsx : jsx를 변환해주는 모듈
+- react
+  - react : react를 사용하기 위한 모듈
+  - react-dom : 최종 랜더링할 때 필요한 모듈
 
-## Available Scripts
+<br>
+<br>
 
-In the project directory, you can run:
+# TypeScript를 사용하여 React 앱을 만들려면 필요한 모듈들
 
-### `yarn start`
+- module bundler
+  - webpack 2
+  - webpack-dev-server
+- loader
+  - ts-loader : typescript를 변환하기 위한 모듈
+    - typescript : typescript 필수 모듈
+  - tslint-loader
+    - tslint : 코드를 검사해주는 모듈 (eslint와 비슷)
+    - tslint-react
+  - source-map-loader
+- react
+  - react, @types/react
+  - react-dom, @types/react-dom
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
+<br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# typescript가 적용된 react CRA 명령어
 
-### `yarn test`
+```
+npm i create-react-app -g
+npx create-react-app [프로젝트 이름] --template=typescript
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+참고한 블로그 : [CRA(Create-React-App)으로 Typescript 설정하기](https://velog.io/@miiunii/CRACreate-React-App%EC%9C%BC%EB%A1%9C-Typescript-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)
